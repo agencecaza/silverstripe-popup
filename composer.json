@@ -1,0 +1,30 @@
+{
+    "name": "intwebg/silverstripe-popup",
+    "description": "Enable a popup modal with custom settings",
+    "type": "silverstripe-vendormodule",
+    "keywords": ["silverstripe", "modal", "popup"],
+	  "license": "BSD-3-Clause",
+    "authors": [
+    {
+        "name": "Stéphane Guevremont",
+        "email": "stephane.guevremont@gmail.com"
+    }],
+    "require": {
+        "silverstripe/cms": "^4",
+        "silverstripe/framework": "^4"
+    },
+    "dependencies": {
+       "jquery": "^2"
+    },
+    "autoload": {
+      "psr-4": {
+          "intwebg\\membermodalsession\\": "src/"
+      }
+    },
+    "extra": {
+      "installer-name": "popup",
+      "expose": [
+          "client"
+      ]
+    }
+}
