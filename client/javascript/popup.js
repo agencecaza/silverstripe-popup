@@ -2,27 +2,26 @@ jQuery.noConflict();
 
 (function($) {
 
+	$('.popup .close, .popup a.redirect').on('click', function() {
 
+		var popup = $('.popup');
 
-		$('.popup .close').on('click', function() {
-
-			var PopUp = $('.popup');
-
-			$.ajax({
-				url: "popupajax/close",
-				context: this,
-				data: {datetime:$('.popup').data('timestamp')},
-				success: function (data) {
-					PopUp.fadeOut();
-					console.log('Popup Closed');
-				},
-				error: function (data) {
-					console.log('Problem closing.');
+		$.ajax({
+			url: "popupajax/close",
+			context: this,
+			data: {datetime:$('.popup').data('timestamp')},
+			success: function (data) {
+			popup.fadeOut();
+			console.log('Close.');
+			if (href) {
+				window.location.href = href;
 				}
-			});
-
+			},
+			error: function (data) {
+				console.log('Problem closing.');
+			}
 		});
-
-
+		
 	});
+	
 }(jQuery));
