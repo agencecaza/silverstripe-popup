@@ -1,16 +1,13 @@
 <?php
 
+namespace Intwebg\Popup;
+
+use Intwebg\Popup\PopupConfig;
+
 use SilverStripe\Core\Extension;
 use SilverStripe\Control\Cookie;
 
 class PopupControllerExtension extends Extension {
-
-	public function onAfterInit() {
-	echo strtotime(self::PopupConfig()->LastEdited);
-
-	}
-
-
 
 	public function PopupConfig() {
 		return PopupConfig::get()->first();
@@ -39,7 +36,7 @@ class PopupControllerExtension extends Extension {
 				$ActivePopup=$Popup;
 			}
 
-			if ($ActivePopup) {
+			if (isset($ActivePopup)) {
 				if (!isset($_COOKIE['Popup'])) {
 					Cookie::set('Popup', 1, 2400 );
 					return true;

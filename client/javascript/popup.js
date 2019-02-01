@@ -5,6 +5,7 @@ jQuery.noConflict();
 	$('.popup .close, .popup a.redirect').on('click', function() {
 
 		var popup = $('.popup');
+		var href = $(this).attr('data-href');
 
 		$.ajax({
 			url: "popup/close",

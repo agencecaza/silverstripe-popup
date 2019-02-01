@@ -1,5 +1,7 @@
 <?php
 
+namespace Intwebg\Popup;
+
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;

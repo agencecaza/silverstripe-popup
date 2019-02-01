@@ -1,5 +1,8 @@
 <?php
 
+namespace Intwebg\Popup;
+
+
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\CheckboxField;
@@ -17,6 +20,10 @@ use SilverStripe\Forms\TabSet;
 use SilverStripe\Forms\Tab;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+
+use Intwebg\Popup\PopupConfig;
+
+
 
 use SheaDawson\TimePickerField\TimePickerField;
 
