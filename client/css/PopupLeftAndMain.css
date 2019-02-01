@@ -1,0 +1,27 @@
+.cms-content-header.north {
+  width:100% !important;
+}
+
+.cms-content-actions.cms-content-controls.south {
+  width:100%;
+  position: absolute;
+  bottom:0;
+}
+
+.ui-widget-header {
+  display: none;
+}
+
+.ui-datepicker-header, .ui-timepicker-title {
+  display: block;
+}
+
+#Form_EditForm_error {
+  margin:15px;
+  margin-bottom:0;
+}
+
+.cms-content-fields {
+  height: calc(100vh - 95px);
+  overflow: scroll;
+}
