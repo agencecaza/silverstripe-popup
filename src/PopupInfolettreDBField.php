@@ -2,7 +2,7 @@
 
 use SilverStripe\ORM\DataObject;
 
-class PopUpInfolettreConfig extends DataObject {
+class PopupConfig extends DataObject {
 
 	function canEdit($member = null)
 	{
@@ -27,17 +27,17 @@ class PopUpInfolettreConfig extends DataObject {
 
 
 	public static $db = array(
-		'Online'=>'Boolean',
-		'DateTime'=>'SS_Datetime',
-		'DateTimeEnd'=>'SS_Datetime',
-		'DateTimeActive' => 'SS_Datetime',
+		'Online' => 'Boolean',
+		'DateTime' => 'Datetime',
+		'DateTimeEnd' => 'Datetime',
+		'DateTimeActive' => 'Datetime',
 		'ButtonText' => 'Text',
 		'Content' => 'HTMLText'
 	);
 
 	public static $has_one = array(
-		'Image' => 'Image',
-		'Redirection' => 'SiteTree',
+		'Image' => Image::class,
+		'Redirect' => SiteTree::class,
 	);
 
 
