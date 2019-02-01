@@ -3,7 +3,7 @@
 use SilverStripe\Core\Extension;
 use SilverStripe\Control\Cookie;
 
-class PopupExtension extends Extension {
+class PopupControllerExtension extends Extension {
 
 	public function PopupConfig() {
 		return PopupConfig::get()->first();
