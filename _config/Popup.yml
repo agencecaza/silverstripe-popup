@@ -1,0 +1,6 @@
+Director:
+  rules:
+    'popupajax//$Action/$ID': 'PopupAjaxController'
+SilverStripe\CMS\Controllers\ContentController:
+  extensions:
+    - PopupControllerExtension

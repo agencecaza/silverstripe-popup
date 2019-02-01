@@ -1,3 +1,0 @@
-Director:
-  rules:
-    'popupajax//$Action/$ID': 'PopupAjaxController'
