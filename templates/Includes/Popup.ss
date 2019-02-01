@@ -1,18 +1,27 @@
-<% if PopUp %>
+<% if Popup %>
 
-  <div class="popup" data-timestamp="$PopUpTimeStamp">
+  <div class="popup" data-timestamp="$PopupTimeStamp">
     <div>
-  		<div class="close close">X</div>
+  		<div class="close">X</div>
   		<div class="row">
-  			<div class="col-xs-12 col-sm-6">
-  				$PopupConfig.Image
-  			</div>
-  			<div class="col-xs-12 col-sm-6">
-  		    <div class="content typography">
-  					$PopupConfig.Content
-  					<a href="$PopupConfig.Redirection.Link"><input type="submit" value="$PopupConfig.ButtonText"/></a>
-  				</div>
-  			</div>
+        <% if PopupConfig.Image %>
+  			  <div class="col-xs-12 col-sm-6">
+  			  	$PopupConfig.Image
+  		  	</div>
+  			  <div class="col-xs-12 col-sm-6">
+  		      <div class="content typography">
+  			  		$PopupConfig.Content
+            <a class="redirect" data-href="$PopupConfig.Redirection.AbsoluteLink"><button>$PopupConfig.ButtonText</button></a>
+  			  	</div>
+  		  	</div>
+        <% else %>
+          <div class="col-xs-12">
+  		      <div class="content typography">
+  			  		$PopupConfig.Content
+            <a class="redirect" data-href="$PopupConfig.Redirection.AbsoluteLink"><button>$PopupConfig.ButtonText</button></a>
+  			  	</div>
+  		  	</div>
+        <% end_if %>
   		</div>
   	</div>
   </div>
