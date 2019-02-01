@@ -11,7 +11,7 @@ use SilverStripe\Forms\Form;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\Forms\FormAction;
 
-class PopUpLeftAndMain extends LeftAndMain {
+class PopupLeftAndMain extends LeftAndMain {
 
 	private static $url_segment = 'popup';
 	private static $menu_title  = 'Popup';
@@ -20,8 +20,8 @@ class PopUpLeftAndMain extends LeftAndMain {
 
 
 	private static $allowed_actions = array(
-      'PopupSubmit'
-  );
+      	  'PopupSubmit'
+  	);
 
 	public function getEditForm($id = null, $fields = null)
 	{
@@ -30,29 +30,42 @@ class PopUpLeftAndMain extends LeftAndMain {
 		}
 		$form = parent::getEditForm($id);
 
+		/* */
+
 		$fields = FieldList::create(
-			new CheckboxField('Online', 'Put Popup online'),
-			new CheckboxField('Reset', 'Reset the date and time'),
-			new DateTimeField('DateTime', 'Date and time start'),
-			new DateTimeField('DateTimeEnd', 'Date and time end'),
-			HtmlEditorField::create(
-				'Content',
-				'Content'
-			),
-			$uploadField = UploadField::create(
-				'Image',
-				'Image'
-			),
-			TextField::create(
-				'ButtonText',
-				'Button text'
-			),
-			DropdownField::create(
-				'RedirectionID',
-				'Redirect to:',
-				Versioned::get_by_stage('Page','Live')->map('ID','Title')
+		$root = TabSet::create(
+			'Root',
+			 Tab::create(
+				 '',
+					CheckboxField::create('Online', 'Put Popup online'),
+					CheckboxField::create('Reset', 'Reset the date and time'),
+					$date = DateTimeField::create('DateTime', 'Start date'),
+					$dateend = DateTimeField::create('DateTimeEnd', 'End date'),
+					DropdownField::create(
+						'RedirectionID',
+						'Redirect to:',
+						Versioned::get_by_stage('Page','Live')->map('ID','Title')
+					),
+					HtmlEditorField::create(
+						'Content',
+						'Content'
+					),
+					$uploadField = UploadField::create(
+						'Image',
+						'Image'
+					),
+					TextField::create(
+						'ButtonText',
+						'Button text'
+					)
+				)
 			)
 		);
+
+		$date->getDateField()->setConfig('showcalendar', true);
+		$date->setTimeField(TimePickerField::create('DateTime[time]')->setTitle('Start time'));
+		$dateend->getDateField()->setConfig('showcalendar', true);
+		$dateend->setTimeField(TimePickerField::create('DateTimeEnd[time]')->setTitle('End time'));
 
 		$uploadField->setFolderName('Uploads/Popup');
 		$uploadField->setDisplayFolderName('Uploads/Popup');
@@ -69,12 +82,12 @@ class PopUpLeftAndMain extends LeftAndMain {
     );
 
 
-		$Config = PopupConfig::get()->first();
-		if ($Config>0) {
-			$form->loadDataFrom($Config);
-		}
+	$Config = PopupConfig::get()->first();
+	if ($Config>0) {
+		$form->loadDataFrom($Config);
+	}
 
-    $form->addExtraClass('cms-edit-form');
+$form->addExtraClass('cms-edit-form');
     $form->setTemplate($this->getTemplatesWithSuffix('_EditForm'));
 
     $this->extend('updateEditForm', $form);
@@ -86,28 +99,34 @@ class PopUpLeftAndMain extends LeftAndMain {
 
 		$config = PopupConfig::get()->first();
 
-		if ($config>0) {
-			$form->saveInto($config);
-		} else {
-			$config = new PopupConfig();
-			$config->DateTime = $data['DateTime'];
-			$config->DateTimeEnd = $data['DateTimeEnd'];
-		}
-
-		if ($data['Reset']) {
-			$config->DateTimeActive = time();
-		}
-		$config->write();
-
 		if ($config) {
-			$form->sessionMessage('Settings saved', 'good');
+			if (isset($data['Reset'])) {
+				$config->DateTimeActive = time();
+				$config->write();
+
+				$form->sessionMessage('Changes saved and counter resetted', 'good');
+			} else {
+				$form->sessionMessage('Changes saved', 'good');
+			}
+			return $this->redirectBack();
+
 		} else {
-			$form->sessionMessage('Settings not saved', 'bad');
+
+			$form->sessionMessage('Problem when trying to save data', 'bad');
+
+			return $this->redirectBack();
 		}
-		return $this->redirectBack();
 
 	}
 
+	
 
+	public function init() {
+	    parent::init();
 
+	    Requirements::css('intwebg/silverstripe-popup:client/css/PopupLeftAndMain.css');
+
+	}
+	
+	
 }
