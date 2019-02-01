@@ -1,27 +1,26 @@
-.cms-content-header.north {
-  width:100% !important;
+.cms-content.PopupLeftAndMain {
+  overflow-y: scroll;
 }
 
-.cms-content-actions.cms-content-controls.south {
-  width:100%;
+.cms-content-header-tabs {
+  display:none;
+}
+
+
+.cms-content-controls.south {
+  height: 32px;
   position: absolute;
-  bottom:0;
+  width: calc(100% - 180px);
+  bottom: 0;
+  overflow-x: hidden;
 }
 
-.ui-widget-header {
-  display: none;
+/*
+.flexbox-area-grow {
+  padding-bottom: 132px;
 }
+*/
 
-.ui-datepicker-header, .ui-timepicker-title {
-  display: block;
-}
-
-#Form_EditForm_error {
-  margin:15px;
-  margin-bottom:0;
-}
-
-.cms-content-fields {
-  height: calc(100vh - 95px);
-  overflow: scroll;
+.PopupLeftAndMain .cms-edit-form {
+  padding-bottom: 15px;
 }

@@ -5,6 +5,13 @@ use SilverStripe\Control\Cookie;
 
 class PopupControllerExtension extends Extension {
 
+	public function onAfterInit() {
+	echo strtotime(self::PopupConfig()->LastEdited);
+
+	}
+
+
+
 	public function PopupConfig() {
 		return PopupConfig::get()->first();
 	}
@@ -15,7 +22,7 @@ class PopupControllerExtension extends Extension {
 
 	public function Popup() {
 
-		$Popup = self::PopupConfig()->LastEdited;
+		$Popup = self::PopupConfig();
 
 		if ($Popup->Online) {
 
@@ -36,13 +43,14 @@ class PopupControllerExtension extends Extension {
 				if (!isset($_COOKIE['Popup'])) {
 					Cookie::set('Popup', 1, 2400 );
 					return true;
-				} elseif ($_COOKIE['Popup'] < strtotime($Popup->DateTimePopupActive)) {
+				} elseif ($_COOKIE['Popup'] < strtotime($Popup->DateTimeActive)) {
 					return true;
 				}
 
 			}  else {
 				return false;
 			}
+
 
 		} else {
 			return false;

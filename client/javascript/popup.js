@@ -7,7 +7,7 @@ jQuery.noConflict();
 		var popup = $('.popup');
 
 		$.ajax({
-			url: "popupajax/close",
+			url: "popup/close",
 			context: this,
 			data: {datetime:$('.popup').data('timestamp')},
 			success: function (data) {
@@ -21,7 +21,7 @@ jQuery.noConflict();
 				console.log('Problem closing.');
 			}
 		});
-		
+
 	});
-	
+
 }(jQuery));
