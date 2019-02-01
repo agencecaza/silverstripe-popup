@@ -11,14 +11,15 @@
     }],
     "require": {
         "silverstripe/cms": "^4",
-        "silverstripe/framework": "^4"
+        "silverstripe/framework": "^4",
+	"sheadawson/silverstripe-timepickerfield": "dev-master"	    
     },
     "dependencies": {
        "jquery": "^2"
     },
     "autoload": {
       "psr-4": {
-          "intwebg\\membermodalsession\\": "src/"
+          "intwebg\\silverstripe-popup\\": "src/"
       }
     },
     "extra": {
