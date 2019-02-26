@@ -15,12 +15,13 @@
   overflow-x: hidden;
 }
 
-/*
-.flexbox-area-grow {
-  padding-bottom: 132px;
-}
-*/
-
 .PopupLeftAndMain .cms-edit-form {
   padding-bottom: 15px;
+}
+
+
+.font-icon-intwebg-popup-popupleftandmain:before {
+  content:"_";
+  color:transparent;
+  background: url(../images/popup-icon.png) no-repeat 100%;
 }
