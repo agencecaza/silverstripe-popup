@@ -124,10 +124,10 @@ class PopupLeftAndMain extends LeftAndMain {
 			if (isset($data['Reset'])) {
 				$config->DateTimeActive = time();
 
-				$form->sessionMessage('Settings saved and counter resetted', 'good');
+				$form->sessionMessage(_t('PopupLeftAndMain.SETTINGSSAVEDANDCOOKIERRESETTED','Settings saved and cookie resetted'), 'good');
 			} else {
 
-				$form->sessionMessage('Settings saved', 'good');
+				$form->sessionMessage(_t('PopupLeftAndMain.SETTINGSSAVED','Settings saved'), 'good');
 			}
 
 		}
