@@ -8,3 +8,5 @@ fr:
     RESETDATETIME: 'Réinitialiser le cookie de la date et heure'
     ONLINE: 'Mettre en ligne'
     SUBMIT: 'Soumettre'
+    SETTINGSSAVEDANDCOOKIERRESETTED: 'Configuration sauvegardée et cookie réinitialisé'
+    SETTINGSSAVED: 'Configuration sauvegardée'
