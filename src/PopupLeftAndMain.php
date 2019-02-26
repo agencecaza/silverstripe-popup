@@ -54,18 +54,18 @@ class PopupLeftAndMain extends LeftAndMain {
 			'Root',
 			 Tab::create(
 				 '',
-					CheckboxField::create('Online', 'Put Popup online'),
-					CheckboxField::create('Reset', 'Reset the date and time'),
-					$date = DatetimeField::create('DateTime', 'Start date')->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
-					$dateend = DatetimeField::create('DateTimeEnd', 'End date')->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
+					CheckboxField::create('Online', _t('PopupLeftAndMain.ONLINE','Put online')),
+					CheckboxField::create('Reset', _t('PopupLeftAndMain.RESETDATETIME','Reset the cookie datetime')),
+					$date = DatetimeField::create('DateTime', _t('PopupLeftAndMain.STARTDATETIME','Start datetime'))->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
+					$dateend = DatetimeField::create('DateTimeEnd', _t('PopupLeftAndMain.ENDDATETIME','End datetime'))->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
 					DropdownField::create(
 						'RedirectID',
-						'Redirect to:',
+						_t('PopupLeftAndMain.REDIRECTTO','Redirect to:'),
 						Versioned::get_by_stage('Page','Live')->map('ID','Title')
 					),
 					HtmlEditorField::create(
 						'Content',
-						'Content'
+						_t('PopupLeftAndMain.CONTENT','Content')
 					),
 					$uploadField = UploadField::create(
 						'Image',
@@ -73,7 +73,7 @@ class PopupLeftAndMain extends LeftAndMain {
 					)->setAllowedMaxFileNumber(1),
 					TextField::create(
 						'ButtonText',
-						'Button text'
+						_t('PopupLeftAndMain.BUTTONTEXT','Button text')
 					)
 				)
 			)
@@ -88,7 +88,7 @@ class PopupLeftAndMain extends LeftAndMain {
 		$uploadField->setFolderName('Uploads/Popup');
 
 		$actions = new FieldList(
-			FormAction::create("doSave")->setTitle("Submit")->addExtraClass('btn-primary')
+			FormAction::create("doSave")->setTitle(_t('PopupLeftAndMain.SUBMIT','Submit'))->addExtraClass('btn-primary')
 		);
 
     $form = new Form(
