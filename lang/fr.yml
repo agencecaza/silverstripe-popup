@@ -1,0 +1,10 @@
+fr:
+  PopupLeftAndMain:
+    REDIRECTTO: 'Rediriger vers:'
+    CONTENT: 'Contenu'
+    BUTTONTEXT: 'Texte du bouton'
+    ENDDATETIME: 'Date et heure de fin'
+    STARTDATETIME: 'Date et heure de départ'
+    RESETDATETIME: 'Réinitialiser le cookie de la date et heure'
+    ONLINE: 'Mettre en ligne'
+    SUBMIT: 'Soumettre'
