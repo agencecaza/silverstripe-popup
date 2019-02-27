@@ -5,3 +5,7 @@ SilverStripe\Control\Director:
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Intwebg\Popup\PopupControllerExtension
+
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Intwebg\Popup\LeftAndMainIcon
