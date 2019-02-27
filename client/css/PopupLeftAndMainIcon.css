@@ -1,0 +1,6 @@
+
+.font-icon-intwebg-popup-popupleftandmain:before {
+  content:"_";
+  color:transparent;
+  background: url(../images/popup-icon.png) no-repeat 100%;
+}
