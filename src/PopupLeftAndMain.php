@@ -149,12 +149,12 @@ class PopupLeftAndMain extends LeftAndMain {
 	public function init() {
 	    parent::init();
 
-			Requirements::css('resources/vendor/intwebg/silverstripe-popup/client/css/PopupLeftAndMain.css');
+			Requirements::css('intwebg/silverstripe-popup:client/css/PopupLeftAndMain.css');
 
-			Requirements::css('resources/vendor/intwebg/silverstripe-popup/client/thirdparty/datetimepicker/build/jquery.datetimepicker.min.css');
-			Requirements::javascript('resources/vendor/intwebg/silverstripe-popup/client/thirdparty/datetimepicker/build/jquery.datetimepicker.full.min.js');
+			Requirements::css('intwebg/silverstripe-popup:client/thirdparty/datetimepicker/build/jquery.datetimepicker.min.css');
+			Requirements::javascript('intwebg/silverstripe-popup:client/thirdparty/datetimepicker/build/jquery.datetimepicker.full.min.js');
 
-			Requirements::javascript('resources/vendor/intwebg/silverstripe-popup/client/javascript/DateTime.js');
+			Requirements::javascript('intwebg/silverstripe-popup:client/javascript/DateTime.js');
 
 
 
