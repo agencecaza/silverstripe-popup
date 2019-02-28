@@ -11,7 +11,8 @@
     }],
     "require": {
         "silverstripe/cms": "^4",
-        "silverstripe/framework": "^4"
+        "silverstripe/framework": "^4",
+        "silverstripe/timepickerfield": "dev-master"
     },
     "dependencies": {
        "jquery": "^2"
