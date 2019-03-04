@@ -2,6 +2,11 @@ jQuery.noConflict();
 
 (function($) {
 
+	function show(){
+	  $('.popup').addClass('show');
+	}
+	setTimeout(show, $('.popup').attr('data-displaydelay') * 1000);
+
 	$('.popup .close, .popup a.redirect').on('click', function() {
 
 		var popup = $('.popup');
@@ -12,7 +17,7 @@ jQuery.noConflict();
 			context: this,
 			data: {datetime:$('.popup').data('timestamp')},
 			success: function (data) {
-			popup.fadeOut();
+			popup.removeClass('show');
 			console.log('Close.');
 			if (href) {
 				window.location.href = href;
