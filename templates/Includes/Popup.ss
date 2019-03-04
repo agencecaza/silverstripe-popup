@@ -1,6 +1,6 @@
 <% if Popup %>
 
-  <div class="popup" data-timestamp="$PopupTimeStamp">
+  <div class="popup" data-displaydelay="$PopupConfig.DisplayDelay" data-timestamp="$PopupTimeStamp">
     <div>
   		<div class="close">X</div>
   		<div class="row">
