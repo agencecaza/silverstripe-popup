@@ -17,7 +17,7 @@ class PopupConfig extends DataObject {
 		'DateTimeActive' => 'Datetime',
 		'ButtonText' => 'Text',
 		'Content' => 'HTMLText'
-		'DisplayDelay' => 'Varchar'
+		'DisplayDelay' => 'Int'
 	);
 
 	private static $has_one = array(
