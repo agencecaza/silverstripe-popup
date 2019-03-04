@@ -1,6 +1,17 @@
 .popup {
   z-index: 100000;
   position: relative;
+  opacity:0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.popup.show {
+  opacity:1;
+  visibility: visible;
 }
 
 .popup .close {
