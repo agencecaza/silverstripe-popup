@@ -16,7 +16,7 @@ class PopupConfig extends DataObject {
 		'DateTimeEnd' => 'Datetime',
 		'DateTimeActive' => 'Datetime',
 		'ButtonText' => 'Text',
-		'Content' => 'HTMLText'
+		'Content' => 'HTMLText',
 		'DisplayDelay' => 'Int'
 	);
 
