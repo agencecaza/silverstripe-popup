@@ -1,4 +1,4 @@
-<h1>intwebg/silverstripe-popup</h1>
+<h1>agencecaza/silverstripe-popup</h1>
 <p>Enable a popup modal with custom settings directly from the LeftAndMain menu.</p>
 
 <h2>Installation</h2>
