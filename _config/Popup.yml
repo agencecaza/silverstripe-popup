@@ -1,11 +1,11 @@
 SilverStripe\Control\Director:
   rules:
-    'popup//$Action/$ID': 'Intwebg\Popup\PopupController'
+    'popup//$Action/$ID': 'AgenceCaza\Popup\PopupController'
 
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
-    - Intwebg\Popup\PopupControllerExtension
+    - AgenceCaza\Popup\PopupControllerExtension
 
 SilverStripe\Admin\LeftAndMain:
   extensions:
-    - Intwebg\Popup\LeftAndMainIcon
+    - AgenceCaza\Popup\LeftAndMainIcon
