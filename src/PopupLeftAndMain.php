@@ -21,7 +21,7 @@ use SilverStripe\Forms\Tab;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 
-use Intwebg\Popup\PopupConfig;
+use AgenceCaza\Popup\PopupConfig;
 
 
 
