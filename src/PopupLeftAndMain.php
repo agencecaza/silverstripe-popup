@@ -1,6 +1,6 @@
 <?php
 
-namespace Intwebg\Popup;
+namespace AgenceCaza\Popup;
 
 
 use SilverStripe\Admin\LeftAndMain;
