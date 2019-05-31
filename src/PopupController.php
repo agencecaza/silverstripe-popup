@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Intwebg\Popup;
+namespace AgenceCaza\Popup;
 
 
 
