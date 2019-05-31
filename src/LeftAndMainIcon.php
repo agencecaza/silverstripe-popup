@@ -1,6 +1,6 @@
 <?php
 
-namespace Intwebg\Popup;
+namespace AgenceCaza\Popup;
 
 use SilverStripe\View\Requirements;
 use SilverStripe\Core\Extension;
@@ -8,7 +8,7 @@ use SilverStripe\Core\Extension;
 class LeftAndMainIcon extends Extension {
 
 	public function init() {
-		Requirements::css('intwebg/silverstripe-popup:client/css/PopupLeftAndMainIcon.css');
+		Requirements::css('agencecaza/silverstripe-popup:client/css/PopupLeftAndMainIcon.css');
 	}
   
 }
