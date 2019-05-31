@@ -1,6 +1,6 @@
 <?php
 
-namespace Intwebg\Popup;
+namespace AgenceCaza\Popup;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Assets\Image;
@@ -8,7 +8,7 @@ use SilverStripe\CMS\Model\SiteTree;
 
 class PopupConfig extends DataObject {
 
-	private static $table_name = 'Intwebg_PopupConfig';
+	private static $table_name = 'AgenceCaza_PopupConfig';
 
 	private static $db = array(
 		'Online' => 'Boolean',
