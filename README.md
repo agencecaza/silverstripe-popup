@@ -15,7 +15,7 @@
 <p>Add the following code in your <code>app.yml</code> to enable.</p>
 
 <pre>
-Intwebg\Popup\PopupConfig:
+AgenceCaza\Popup\PopupConfig:
   extensions:
     - TractorCow\Fluent\Extension\FluentVersionedExtension
   translate:
