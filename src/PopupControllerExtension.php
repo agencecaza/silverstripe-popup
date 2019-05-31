@@ -1,8 +1,8 @@
 <?php
 
-namespace Intwebg\Popup;
+namespace AgenceCaza\Popup;
 
-use Intwebg\Popup\PopupConfig;
+use AgenceCaza\Popup\PopupConfig;
 
 use SilverStripe\Core\Extension;
 use SilverStripe\Control\Cookie;
