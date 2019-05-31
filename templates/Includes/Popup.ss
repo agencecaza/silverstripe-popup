@@ -26,7 +26,7 @@
   	</div>
   </div>
 
-  <% require css("intwebg/silverstripe-popup:client/css/popup.css") %>
-  <% require javascript("intwebg/silverstripe-popup:client/javascript/popup.js") %>
+  <% require css("agencecaza/silverstripe-popup:client/css/popup.css") %>
+  <% require javascript("agencecaza/silverstripe-popup:client/javascript/popup.js") %>
 
 <% end_if %>
