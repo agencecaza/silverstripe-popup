@@ -37,17 +37,16 @@ class PopupLeftAndMain extends LeftAndMain {
 
 
 	private static $allowed_actions = array(
-	  'doSave','success'
+	  'doSave'
 	);
 
 	public function getEditForm($id = null, $fields = null)
 	{
 		if (!$id) {
-				$id = $this->currentPageID();
+			$id = $this->currentPageID();
 		}
 		$form = parent::getEditForm($id);
 
-		/* */
 
 		$fields = FieldList::create(
 		$root = TabSet::create(
@@ -83,12 +82,6 @@ class PopupLeftAndMain extends LeftAndMain {
 			)
 		);
 
-		//$date->setTimeField(TimePickerField::create('DateTime[time]')->setTitle('Date And Time'));
-
-		//$date->getDateField()->setConfig('showcalendar', true);
-	//	$dateend->getDateField()->setConfig('showcalendar', true);
-	//	$dateend->setTimeField(TimePickerField::create('DateTimeEnd[time]')->setTitle('End time'));
-
 		$uploadField->setFolderName('Uploads/Popup');
 
 		$actions = new FieldList(
@@ -102,9 +95,7 @@ class PopupLeftAndMain extends LeftAndMain {
         $actions
     );
 
-		$form->addExtraClass('cms-edit-form');
     $form->setTemplate($this->getTemplatesWithSuffix('_EditForm'));
-		//$form->setFormAction($this->Link().'PopupSubmit');
 
 		$config = PopupConfig::get()->first();
 		if (isset($config) > 0) {
@@ -112,7 +103,7 @@ class PopupLeftAndMain extends LeftAndMain {
 		}
 		$this->extend('updateEditForm', $form);
 
-    return $form;
+    return $form->addExtraClass('PopupForm');
   }
 
 	public function doSave($data, Form $form) {
@@ -139,16 +130,11 @@ class PopupLeftAndMain extends LeftAndMain {
 		$form->saveInto($config);
 		$config->write();
 
-
-		return $this->redirect($this->Link('success'));
-
-
+		return $this->redirectBack();
 
 	}
 
-	public function success() {
-		return $this->redirect("admin/popup");
-	}
+	
 
 	public function init() {
 	    parent::init();
