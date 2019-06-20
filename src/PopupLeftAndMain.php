@@ -59,8 +59,8 @@ class PopupLeftAndMain extends LeftAndMain {
 						'DisplayDelay',
 						_t('PopupLeftAndMain.DISPLAYDELAY','Display delay')
 					)->setDescription( _t('PopupLeftAndMain.INSECONDS','in seconds') ),
-					$date = DatetimeField::create('DateTime', _t('PopupLeftAndMain.STARTDATETIME','Start datetime'))->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
-					$dateend = DatetimeField::create('DateTimeEnd', _t('PopupLeftAndMain.ENDDATETIME','End datetime'))->setDatetimeFormat('YYYY-MM-dd HH:mm:ss')->setHTML5(false),
+					$date = DatetimeField::create('DateTime', _t('PopupLeftAndMain.STARTDATETIME','Start datetime')),
+					$dateend = DatetimeField::create('DateTimeEnd', _t('PopupLeftAndMain.ENDDATETIME','End datetime')),
 					DropdownField::create(
 						'RedirectID',
 						_t('PopupLeftAndMain.REDIRECTTO','Redirect to:'),
