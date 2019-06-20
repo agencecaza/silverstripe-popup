@@ -19,3 +19,12 @@
   padding-bottom: 15px;
 }
 
+
+.PopupLeftAndMain .panel--padded .ui-tabs-nav {
+  display: none;
+}
+.PopupLeftAndMain #Form_EditForm {
+  padding-bottom: 25px;
+}
+
+
