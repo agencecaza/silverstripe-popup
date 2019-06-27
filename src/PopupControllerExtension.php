@@ -21,7 +21,7 @@ class PopupControllerExtension extends Extension {
 
 		$Popup = self::PopupConfig();
 
-		if (isset($Popup->Online)) {
+		if ($Popup->Online) {
 
 			if ($Popup->DateTime && !$Popup->DateTimeEnd) {
 				if (strtotime($Popup->DateTime) < time() ) { $ActivePopup=$Popup; }
