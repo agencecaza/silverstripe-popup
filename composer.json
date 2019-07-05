@@ -10,9 +10,8 @@
         "email": "stephane@agencecaza.ca"
     }],
     "require": {
-        "silverstripe/cms": "^4",
-        "silverstripe/framework": "^4",
-        "silverstripe/timepickerfield": "dev-master"
+        "silverstripe/cms": "^4.4",
+        "silverstripe/framework": "^4.4",
     },
     "dependencies": {
        "jquery": "^2"
