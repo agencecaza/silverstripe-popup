@@ -36,11 +36,11 @@ class PopupControllerExtension extends Extension {
 				$ActivePopup=$Popup;
 			}
 
-			if (isset($ActivePopup)) {
-				if (!isset($_COOKIE['Popup'])) {
+			if (($ActivePopup)) {
+				if (!(Cookie::get('Popup'))) {
 					Cookie::set('Popup', 1, 2400 );
 					return true;
-				} elseif ($_COOKIE['Popup'] < strtotime($Popup->DateTimeActive)) {
+				} elseif (Cookie::get('Popup') < strtotime($Popup->DateTimeActive)) {
 					return true;
 				}
 
