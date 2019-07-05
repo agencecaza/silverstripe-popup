@@ -2,7 +2,7 @@
 <p>Enable a popup modal with custom settings directly from the LeftAndMain menu.</p>
 
 <h2>Installation</h2>
-<code>composer require agencecaza/silverstripe-popup</code>
+<code>composer require agencecaza/silverstripe-popup</code> <p>Works only with Silverstripe 4.4.x .</p>
 
 <h2>Usage</h2>
 <p>Add <code><% include Popup %></code> in the <code>body</code> of your site.
