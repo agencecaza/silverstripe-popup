@@ -25,7 +25,5 @@ AgenceCaza\Popup\PopupConfig:
 
 <h2>ToDos</h2>
 <ul>
-<li>Improve cookie usage with Silverstripe class</li>
-<li>Resolve javascript reset issue after save</li>
 <li>Release a stable module</li>
 </ul>
