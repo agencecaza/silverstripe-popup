@@ -141,10 +141,7 @@ class PopupLeftAndMain extends LeftAndMain {
 
 			Requirements::css('agencecaza/silverstripe-popup:client/css/PopupLeftAndMain.css');
 
-			Requirements::css('agencecaza/silverstripe-popup:client/thirdparty/datetimepicker/build/jquery.datetimepicker.min.css');
-			Requirements::javascript('agencecaza/silverstripe-popup:client/thirdparty/datetimepicker/build/jquery.datetimepicker.full.min.js');
 
-			Requirements::javascript('agencecaza/silverstripe-popup:client/javascript/DateTime.js');
 
 
 
